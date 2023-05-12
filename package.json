@@ -4,7 +4,8 @@
   "description": "Turn your text into stunning pixel art with PixArt! Our library provides an easy-to-use function that converts any text into a matrix of pixel data, allowing you to create beautiful pixel art with ease. Whether you're a graphic designer, game developer, or just looking to add some unique style to your project, PixArt is the perfect solution for creating eye-catching typography and imagery. So why settle for boring text when you can create stunning pixel art with PixArt?",
   "main": "main.js",
   "scripts": {
-    "test": "npm run start"
+    "test": "npm run build && jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/Rkobuki/text-to-pixel-converter/issues"
   },
-  "homepage": "https://github.com/Rkobuki/text-to-pixel-converter#readme"
+  "homepage": "https://github.com/Rkobuki/text-to-pixel-converter#readme",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
 }
