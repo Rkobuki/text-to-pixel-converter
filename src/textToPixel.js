@@ -1,13 +1,13 @@
 export class CommonModule{
   constructor(){};
-  static textToPixel(text, fontSize = 16) {
+  static textToPixel(text, fontSize = 16,fontStyle = 'sans-serif') {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
   
     canvas.width = fontSize * text.length;
     canvas.height = fontSize;
   
-    ctx.font = `${fontSize}px sans-serif`;
+    ctx.font = `${fontSize}px ${fontStyle}`;
     ctx.fillText(text, 0, fontSize);
   
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
